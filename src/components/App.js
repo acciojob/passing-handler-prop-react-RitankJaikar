@@ -35,14 +35,14 @@ const App = () => {
 
       <div className="row">
         {colourConfig.map((config, index) => (
-          <ColourSelector key={config.key} config={config} selectNextBackground={selectNextBackground} data-testid={config.key} />
+          <ColourSelector key={config.key} config={config} selectNextBackground={selectNextBackground} />
         ))}
       </div>
 
       <div className='row' id="children-wrapper">
         {
           ["selection1", "selection2", "selection3"].map(key => (
-            <Selection className="fix-box" key={key} applyColor={applyColor} nextBackground={nextBackground} />
+            <Selection key={key} applyColor={applyColor} nextBackground={nextBackground} />
           ))
         }
       </div>
